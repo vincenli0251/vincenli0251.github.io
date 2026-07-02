@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>李汶翰 Vincent Li — 工业工程师 × 智能制造 × AI 应用开发</title>
+<meta name="description" content="李汶翰 Vincent Li，Aircom 宁波 IE 工程师。超声波焊接工艺、自动化产线导入、视觉防错、IATF 16949，以及一系列自研智能制造软件。">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ══════════ PRELOADER ══════════ -->
+<div class="preloader" id="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-name">
+      <span class="pl-char">V</span><span class="pl-char">I</span><span class="pl-char">N</span><span class="pl-char">C</span><span class="pl-char">E</span><span class="pl-char">N</span><span class="pl-char">T</span><span class="pl-char pl-space">&nbsp;</span><span class="pl-char">L</span><span class="pl-char">I</span>
+    </div>
+    <div class="preloader-bar"><span id="plBarFill"></span></div>
+    <div class="preloader-count" id="plCount">00</div>
+  </div>
+  <div class="preloader-curtain c1"></div>
+  <div class="preloader-curtain c2"></div>
+</div>
+
+<!-- ══════════ FIXED UI ══════════ -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="noise-overlay"></div>
+<div class="scroll-progress"><span id="scrollProgressBar"></span></div>
+
+<nav class="nav" id="nav">
+  <a class="nav-logo" href="#hero">李汶翰<em>/ VL</em></a>
+  <div class="nav-links">
+    <a href="#about" data-nav>关于</a>
+    <a href="#impact" data-nav>数据</a>
+    <a href="#projects" data-nav>项目</a>
+    <a href="#journey" data-nav>经历</a>
+    <a href="#skills" data-nav>能力</a>
+    <a href="#contact" data-nav class="nav-cta">联系我</a>
+  </div>
+  <button class="nav-burger" id="navBurger" aria-label="菜单"><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">关于 <em>About</em></a>
+  <a href="#impact">数据 <em>Impact</em></a>
+  <a href="#projects">项目 <em>Works</em></a>
+  <a href="#journey">经历 <em>Journey</em></a>
+  <a href="#skills">能力 <em>Skills</em></a>
+  <a href="#contact">联系 <em>Contact</em></a>
+</div>
+
+<!-- ══════════ HERO ══════════ -->
+<header class="hero" id="hero">
+  <div class="hero-bg" style="background-image:url('images/hero-banner.png')"></div>
+  <div class="hero-veil"></div>
+  <canvas id="heroCanvas"></canvas>
+
+  <div class="hero-frame">
+    <span class="hf-line hf-t"></span><span class="hf-line hf-b"></span>
+    <span class="hf-meta hf-tl">NINGBO · QIANWAN</span>
+    <span class="hf-meta hf-tr">30.17°N&nbsp;&nbsp;121.31°E</span>
+    <span class="hf-meta hf-bl">INDUSTRIAL ENGINEER</span>
+    <span class="hf-meta hf-br">PORTFOLIO © 2026</span>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-kicker" data-reveal><span class="hero-kicker-dot"></span>工艺 × 自动化 × 代码</p>
+    <h1 class="hero-title" id="heroTitle" aria-label="李汶翰">李汶翰</h1>
+    <div class="hero-sub" data-reveal>
+      <span class="hero-sub-en">Vincent&nbsp;Li</span>
+      <span class="hero-sub-sep"></span>
+      <span class="hero-sub-cn">把产线上的每一个痛点，<br class="only-m">写成能自己运转的解法</span>
+    </div>
+    <div class="hero-tags" data-reveal>
+      <span>超声波焊接</span><span>自动化产线导入</span><span>视觉防错</span><span>IATF 16949</span><span>AI 应用开发</span>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span class="hs-label">SCROLL</span>
+    <span class="hs-track"><span class="hs-thumb"></span></span>
+  </div>
+</header>
+
+<!-- ══════════ MARQUEE ══════════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>超声波焊接 <i>✦</i> 自动化导入 <i>✦</i> 视觉防错 <i>✦</i> IATF 16949 <i>✦</i> 精益生产 <i>✦</i> Python <i>✦</i> 机器视觉 <i>✦</i> PLC 数据采集 <i>✦</i> 全栈开发 <i>✦</i> </span>
+    <span>超声波焊接 <i>✦</i> 自动化导入 <i>✦</i> 视觉防错 <i>✦</i> IATF 16949 <i>✦</i> 精益生产 <i>✦</i> Python <i>✦</i> 机器视觉 <i>✦</i> PLC 数据采集 <i>✦</i> 全栈开发 <i>✦</i> </span>
+  </div>
+</div>
+
+<main>
+
+<!-- ══════════ ABOUT ══════════ -->
+<section class="section about" id="about">
+  <span class="section-index" aria-hidden="true">01</span>
+  <div class="section-head">
+    <p class="section-eyebrow" data-reveal>ABOUT — 关于我</p>
+    <h2 class="section-title" data-split>一个不安分的<br><em>工业工程师</em></h2>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-lead" data-reveal>
+      <p class="about-quote">「产线教我看见问题，<br>代码给我解决问题的自由。」</p>
+      <p class="about-body">我是李汶翰，Aircom 宁波的 IE 工程师，负责 CA / CP / Hose 三条汽车零部件产线的工艺与改善。白天在现场调焊接参数、导自动化线、迎国际审核；工位之外，我把这些真实痛点一个个写成软件——故障判定、视觉检测、审核系统、PLC 监控——让工厂里的经验变成可以复用的工具。</p>
+      <p class="about-body">供职于欧企，英语为工作语言，直接对接 Volvo、Audi、Subaru、BMW、Nissan 等主机厂需求端。</p>
+    </div>
+    <ol class="about-list">
+      <li data-reveal><b>焊接工艺深耕</b><span>超声波 / 电阻焊接工艺，在降噪、提速、外观与强度优化上有大量一线经验</span></li>
+      <li data-reveal><b>自动化导入 PM</b><span>主导自动化产线替代手工产线全过程，把控项目节点与深度风险管控</span></li>
+      <li data-reveal><b>视觉防错从零导入</b><span>KEYENCE / BALLUFF 视觉系统选型、调试到量产，识别判定经验丰富</span></li>
+      <li data-reveal><b>体系审核应审</b><span>深度参与 IATF 16949 / ISO 9001 / 14001 / 45001 审核，保持 100% 通过</span></li>
+      <li data-reveal><b>低成本改造</b><span>用最小投入完成产能、OEE、PPPH 的提升与人机工程优化</span></li>
+      <li data-reveal><b>软件自研能力</b><span>Python / Web 全栈 / 机器视觉 / PLC 通讯，把现场问题写成产品级工具</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════ IMPACT ══════════ -->
+<section class="section impact" id="impact">
+  <span class="section-index" aria-hidden="true">02</span>
+  <div class="section-head">
+    <p class="section-eyebrow" data-reveal>IMPACT — 用数据说话</p>
+    <h2 class="section-title" data-split>改善落在<br><em>数字</em>上才算数</h2>
+  </div>
+
+  <div class="impact-grid">
+    <div class="impact-card big" data-reveal>
+      <span class="ic-value"><i data-count="42" data-prefix="+">0</i><small>%</small></span>
+      <span class="ic-label">班产 2200 → 3133</span>
+      <span class="ic-desc">超声波焊接 CT 优化 × 人机工程提升，压缩机产线单班产能提升 42%，员工疲劳度反而下降</span>
+    </div>
+    <div class="impact-card" data-reveal>
+      <span class="ic-value"><i data-count="86.9" data-decimals="1">0</i><small>%</small></span>
+      <span class="ic-label">OEE 55% → 86.9%</span>
+    </div>
+    <div class="impact-card" data-reveal>
+      <span class="ic-value"><i data-count="29.8" data-decimals="1">0</i><small></small></span>
+      <span class="ic-label">PPPH 20 → 29.8</span>
+    </div>
+    <div class="impact-card" data-reveal>
+      <span class="ic-value"><i data-count="12">0</i><small>人</small></span>
+      <span class="ic-label">自动化 Hose 线导入，节省 12 名人力</span>
+    </div>
+    <div class="impact-card" data-reveal>
+      <span class="ic-value"><i data-count="8" data-prefix="−">0</i><small>%</small></span>
+      <span class="ic-label">总体不良率下降 8%</span>
+    </div>
+    <div class="impact-card" data-reveal>
+      <span class="ic-value"><i data-count="83" data-prefix="−">0</i><small>%</small></span>
+      <span class="ic-label">K-VALVE 不良 30000 → 5000 PPM</span>
+    </div>
+    <div class="impact-card" data-reveal>
+      <span class="ic-value"><i data-count="0">0</i><small>项</small></span>
+      <span class="ic-label">IATF 16949 连续两年现场审核零缺陷</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PROJECTS ══════════ -->
+<section class="section projects" id="projects">
+  <span class="section-index" aria-hidden="true">03</span>
+  <div class="section-head">
+    <p class="section-eyebrow" data-reveal>SELECTED WORKS — 自研项目</p>
+    <h2 class="section-title" data-split>从痛点出发的<br><em>工具集</em></h2>
+    <p class="section-note" data-reveal>每一个都源自产线上真实存在的问题，每一个都在真实运行。点击卡片查看系统截图。</p>
+  </div>
+
+  <div class="project-stack">
+
+    <article class="project-card" data-gallery="audit">
+      <div class="pc-inner">
+        <div class="pc-media"><img src="images/audit-tool.png" alt="汽车质量体系审核系统" loading="lazy"><span class="pc-count">12 张截图</span></div>
+        <div class="pc-info">
+          <span class="pc-num">P.01</span>
+          <h3>汽车质量体系审核系统</h3>
+          <p class="pc-en">Automotive Quality Audit Platform</p>
+          <p class="pc-desc">覆盖 IATF 16949 体系审核、VDA 6.3 过程审核、VDA 6.5 产品审核的一体化平台。内置 242 条审核条款库与三套评分引擎，两级审批流，一键生成中英双语 Word 审核报告。</p>
+          <div class="pc-tags"><span>FastAPI</span><span>Vue 3</span><span>PostgreSQL</span><span>IATF 16949</span><span>VDA 6.3 / 6.5</span></div>
+          <span class="pc-open">查看系统截图 <i>→</i></span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card" data-gallery="fault">
+      <div class="pc-inner">
+        <div class="pc-media"><img src="images/fault-diagnosis.png" alt="产线故障快速判定系统" loading="lazy"><span class="pc-count">5 张截图</span></div>
+        <div class="pc-info">
+          <span class="pc-num">P.02</span>
+          <h3>产线故障快速判定系统</h3>
+          <p class="pc-en">Fault Diagnosis Expert System</p>
+          <p class="pc-desc">覆盖 CA / CP / Hose 三条产线全部 30 个工位的故障知识库，jieba 分词 + TF-IDF 检索，现场人员用自然语言描述故障即可秒级定位判定路径，超声焊接工位预置专家级排障方案。</p>
+          <div class="pc-tags"><span>Python</span><span>jieba + TF-IDF</span><span>知识库</span><span>PyInstaller</span></div>
+          <span class="pc-open">查看系统截图 <i>→</i></span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card" data-gallery="capacitor">
+      <div class="pc-inner">
+        <div class="pc-media"><img src="images/capacitor-inspection.png" alt="电容外观 AI 检测" loading="lazy"><span class="pc-count">5 张截图</span></div>
+        <div class="pc-info">
+          <span class="pc-num">P.03</span>
+          <h3>电容外观 AI 检测</h3>
+          <p class="pc-en">Capacitor Visual Inspection</p>
+          <p class="pc-desc">自训练深度学习模型完成电容引脚与外观缺陷检测，PyTorch 训练、ONNX 部署，覆盖大面 / 侧面多视角检测，替代人工目检。</p>
+          <div class="pc-tags"><span>PyTorch</span><span>ONNX</span><span>机器视觉</span><span>缺陷检测</span></div>
+          <span class="pc-open">查看系统截图 <i>→</i></span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card" data-gallery="motion">
+      <div class="pc-inner">
+        <div class="pc-media"><img src="images/motion-monitor.png" alt="人员动作监控系统" loading="lazy"><span class="pc-count">6 张截图</span></div>
+        <div class="pc-info">
+          <span class="pc-num">P.04</span>
+          <h3>人员动作监控系统</h3>
+          <p class="pc-en">Motion Monitoring System</p>
+          <p class="pc-desc">基于视觉识别的作业动作监控，自动识别工位动作序列、统计工时、输出超时报表，为人机工程优化与标准工时制定提供数据支撑。</p>
+          <div class="pc-tags"><span>计算机视觉</span><span>动作识别</span><span>工时分析</span><span>报表自动化</span></div>
+          <span class="pc-open">查看系统截图 <i>→</i></span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card" data-gallery="plc">
+      <div class="pc-inner">
+        <div class="pc-media"><img src="images/plc-monitor.png" alt="PLC 产线数据监控" loading="lazy"><span class="pc-count">2 张截图</span></div>
+        <div class="pc-info">
+          <span class="pc-num">P.05</span>
+          <h3>PLC 产线数据监控</h3>
+          <p class="pc-en">PLC Data Acquisition & Monitor</p>
+          <p class="pc-desc">逆向 ADS 通讯协议直连产线 PLC，实时抓取设备状态与工艺数据，Web 端可视化监控，让隐藏在控制器里的数据变成可分析的资产。</p>
+          <div class="pc-tags"><span>ADS 协议</span><span>PLC 通讯</span><span>实时监控</span><span>数据采集</span></div>
+          <span class="pc-open">查看系统截图 <i>→</i></span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card" data-gallery="ep">
+      <div class="pc-inner">
+        <div class="pc-media"><img src="images/error-proofing-export.png" alt="防错报告自动导出系统" loading="lazy"><span class="pc-count">1 张截图</span></div>
+        <div class="pc-info">
+          <span class="pc-num">P.06</span>
+          <h3>防错报告自动导出系统</h3>
+          <p class="pc-en">Error-proofing Report Automation</p>
+          <p class="pc-desc">Playwright 驱动 Blazor 内部系统，自动完成登录、检索、导出、整理防错测试报告全流程，把每周数小时的重复操作压缩成一次双击。</p>
+          <div class="pc-tags"><span>Playwright</span><span>RPA 自动化</span><span>Blazor</span><span>Excel 报表</span></div>
+          <span class="pc-open">查看系统截图 <i>→</i></span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card" data-gallery="solar">
+      <div class="pc-inner">
+        <div class="pc-media"><img src="images/solar-system.png" alt="太阳系交互系统" loading="lazy"><span class="pc-count">1 张截图</span></div>
+        <div class="pc-info">
+          <span class="pc-num">P.07</span>
+          <h3>太阳系交互系统</h3>
+          <p class="pc-en">Interactive Solar System</p>
+          <p class="pc-desc">纯 Web 实现的太阳系交互可视化——轨道运动、行星信息、沉浸式浏览。工程师的浪漫，是把宇宙也做成可交互的。</p>
+          <div class="pc-tags"><span>Web 可视化</span><span>交互动效</span><span>创意开发</span></div>
+          <span class="pc-open">查看截图 <i>→</i></span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ══════════ JOURNEY ══════════ -->
+<section class="section journey" id="journey">
+  <span class="section-index" aria-hidden="true">04</span>
+  <div class="section-head">
+    <p class="section-eyebrow" data-reveal>JOURNEY — 成长轨迹</p>
+    <h2 class="section-title" data-split>从高分子到产线<br>再到<em>代码</em></h2>
+  </div>
+
+  <div class="timeline" id="timeline">
+    <span class="tl-line"><span class="tl-line-fill" id="tlFill"></span></span>
+
+    <div class="tl-item" data-reveal>
+      <span class="tl-dot"></span>
+      <span class="tl-date">2020 — 2024</span>
+      <h3 class="tl-title">长春工业大学 · 高分子材料与工程</h3>
+      <p class="tl-desc">本科 · 卓越工程师计划。主修高分子化学、高分子物理、复合材料、聚合物成型工艺与模具设计；曾任校宣传部副部长，为校园媒体做设计。</p>
+    </div>
+
+    <div class="tl-item" data-reveal>
+      <span class="tl-dot"></span>
+      <span class="tl-date">2024.07 — 2024.11</span>
+      <h3 class="tl-title">惠州亿纬锂能 · 工艺工程师</h3>
+      <p class="tl-desc">动力电池工艺：K-VALVE 不良从 30000 PPM 降至 5000 PPM；负压化成 / 补电 / DCIR 线体 OEE 提升至 72%+；二次注液自动擦拭机构验证导入，优化 4 名人力。</p>
+    </div>
+
+    <div class="tl-item" data-reveal>
+      <span class="tl-dot"></span>
+      <span class="tl-date">2024.11 — 至今</span>
+      <h3 class="tl-title">Aircom 宁波 · IE 工程师</h3>
+      <p class="tl-desc">CA / CP / Hose 三线工艺负责人：自动化 Hose 线从零导入节省 12 人力；压缩机线班产 +42%、OEE 86.9%；IATF 16949 连续两年零缺陷；Volvo / Audi / Subaru / Nissan 项目全部零延期导入。</p>
+    </div>
+
+    <div class="tl-item" data-reveal>
+      <span class="tl-dot tl-dot-now"></span>
+      <span class="tl-date">同期 · 进行中</span>
+      <h3 class="tl-title">AI 应用开发 · 自我进化</h3>
+      <p class="tl-desc">在工程师本职之外持续构建软件能力：7+ 个落地项目横跨全栈、机器视觉、NLP、PLC 通讯与 RPA——让「会写代码的工艺工程师」成为自己的护城河。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SKILLS ══════════ -->
+<section class="section skills" id="skills">
+  <span class="section-index" aria-hidden="true">05</span>
+  <div class="section-head">
+    <p class="section-eyebrow" data-reveal>CAPABILITIES — 能力矩阵</p>
+    <h2 class="section-title" data-split>两栖<em>能力栈</em></h2>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-block" data-reveal>
+      <span class="sb-num">A</span>
+      <h3>工艺 & 制造</h3>
+      <ul><li>超声波 / 电阻焊接工艺</li><li>压装工艺 · CT 优化</li><li>自动化产线导入 & 项目管理</li><li>精益生产 · OEE / PPPH 提升</li><li>Factory Layout · 人机工程</li></ul>
+    </div>
+    <div class="skill-block" data-reveal>
+      <span class="sb-num">B</span>
+      <h3>质量 & 防错</h3>
+      <ul><li>IATF 16949 现场应审</li><li>ISO 9001 / 14001 / 45001</li><li>KEYENCE / BALLUFF 视觉防错</li><li>Error Proofing 体系搭建</li><li>主机厂对接（Volvo / Audi / BMW…）</li></ul>
+    </div>
+    <div class="skill-block" data-reveal>
+      <span class="sb-num">C</span>
+      <h3>开发 & AI</h3>
+      <ul><li>Python · FastAPI · Vue 3</li><li>PostgreSQL · 全栈交付</li><li>PyTorch / ONNX 机器视觉</li><li>jieba / TF-IDF 文本检索</li><li>PLC 通讯 · Playwright RPA</li></ul>
+    </div>
+    <div class="skill-block" data-reveal>
+      <span class="sb-num">D</span>
+      <h3>设计 & 工具</h3>
+      <ul><li>SolidWorks · AutoCAD</li><li>Photoshop · 视觉设计</li><li>Office 深度自动化</li><li>中 / 英双语工作语言</li><li>AI 工具链深度使用者</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section class="section contact" id="contact">
+  <span class="section-index" aria-hidden="true">06</span>
+  <div class="contact-inner">
+    <p class="section-eyebrow" data-reveal>CONTACT — 保持联系</p>
+    <h2 class="contact-title" data-split>让下一个问题<br>在<em>这里</em>被解决</h2>
+    <a class="contact-mail magnetic" href="mailto:vincentli51@outlook.com" data-reveal>vincentli51@outlook.com<i>↗</i></a>
+    <div class="contact-links" data-reveal>
+      <a href="https://github.com/vincenli0251" target="_blank" rel="noopener">GitHub / vincenli0251</a>
+      <span>·</span>
+      <span>宁波 · 前湾新区</span>
+    </div>
+    <div class="contact-card" data-reveal>
+      <img src="images/business-card.png" alt="Vincent Li 名片" id="bizCard" loading="lazy">
+    </div>
+  </div>
+  <footer class="footer">
+    <span>© 2026 李汶翰 Vincent Li</span>
+    <span class="footer-mid">Designed & engineered with obsession</span>
+    <a href="#hero" class="footer-top">回到顶部 ↑</a>
+  </footer>
+</section>
+
+</main>
+
+<!-- ══════════ LIGHTBOX ══════════ -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lb-backdrop" id="lbBackdrop"></div>
+  <div class="lb-body">
+    <div class="lb-head">
+      <span class="lb-title" id="lbTitle"></span>
+      <span class="lb-counter" id="lbCounter"></span>
+      <button class="lb-close" id="lbClose" aria-label="关闭">✕</button>
+    </div>
+    <div class="lb-stage">
+      <button class="lb-arrow lb-prev" id="lbPrev" aria-label="上一张">←</button>
+      <img id="lbImg" src="" alt="项目截图">
+      <button class="lb-arrow lb-next" id="lbNext" aria-label="下一张">→</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
